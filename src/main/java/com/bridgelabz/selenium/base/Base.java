@@ -4,6 +4,7 @@ package com.bridgelabz.selenium.base;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import java.io.IOException;
@@ -18,12 +19,12 @@ public class Base{
         driver.get("https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin");
 
     }
-///    @AfterTest
-////    public void tearDown(){
-////        driver.close();
-////    }
-////
-////    public static WebDriver getDriver() {
-////        return driver;
-////    }
+
+    @AfterTest
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(
+                2000
+        );
+        driver.close();
+    }
 }

@@ -5,15 +5,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Messaging {
-    @FindBy (xpath = "//*[@id='ember34']/span")
-    WebElement messagebtn;
-    public Messaging(WebDriver driver) {
+public class Search {
+    @FindBy(xpath = "//*[@id=\"ember17\"]/input")
+    WebElement search;
+
+    public Search(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
-    public void openMessaging() throws InterruptedException {
 
-        messagebtn.click();
+    public void setSearch() throws InterruptedException {
+
+        search.sendKeys("tcs jobs");
         Thread.sleep(5000);
 
         return;

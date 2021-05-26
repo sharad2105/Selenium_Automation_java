@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">2</div>
+<div class="counter">3</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1m3.01s</div>
+<div class="counter">26.671s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">50%</div>
+<div class="percent">66%</div>
 <p>successful</p>
 </div>
 </td>
@@ -73,18 +73,18 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="linkedin_messaging"></a>
-<h3 class="failures">linkedin_messaging</h3>
+<a name="linkedin_search"></a>
+<h3 class="failures">linkedin_search</h3>
 <span class="code">
-<pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;ember26&quot;]/span&quot;}
+<pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;ember17&quot;]/input&quot;}
   (Session info: chrome=90.0.4430.212)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-CUM2MCV', ip: '192.168.43.112', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:7374}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a7cdbe77141a2df8c1f376d516bfe1c9
-*** Element info: {Using=xpath, value=//*[@id=&quot;ember26&quot;]/span}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:4791}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5320d4418866d49605a6bf9868b1f6f6
+*** Element info: {Using=xpath, value=//*[@id=&quot;ember17&quot;]/input}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -102,9 +102,9 @@ Session ID: a7cdbe77141a2df8c1f376d516bfe1c9
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at com.bridgelabz.selenium.pages.Messaging.openMessaging(Messaging.java:16)
-	at flipcarttest.LinkedinTest.linkedin_messaging(LinkedinTest.java:26)
+	at com.sun.proxy.$Proxy15.sendKeys(Unknown Source)
+	at com.bridgelabz.selenium.pages.Search.setSearch(Search.java:18)
+	at flipcarttest.LinkedinTest.linkedin_search(LinkedinTest.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -174,12 +174,17 @@ Session ID: a7cdbe77141a2df8c1f376d516bfe1c9
 </thead>
 <tr>
 <td class="success">linkedin_login</td>
-<td class="success">1m2.33s</td>
+<td class="success">20.800s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">linkedin_messaging</td>
-<td class="failures">0.684s</td>
+<td class="success">linkedin_messaging</td>
+<td class="success">5.825s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">linkedin_search</td>
+<td class="failures">0.046s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -190,7 +195,9 @@ Session ID: a7cdbe77141a2df8c1f376d516bfe1c9
 <pre>Test starts linkedin_login
 Name of pass test case linkedin_login
 Test starts linkedin_messaging
-Name of the failed test case linkedin_messaging
+Name of pass test case linkedin_messaging
+Test starts linkedin_search
+Name of the failed test case linkedin_search
 </pre>
 </span>
 </div>
@@ -202,7 +209,7 @@ Name of the failed test case linkedin_messaging
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.8</a> at 26-May-2021, 9:19:23 am</p>
+<a href="http://www.gradle.org">Gradle 6.8</a> at 26-May-2021, 12:21:28 pm</p>
 </div>
 </div>
 </body>

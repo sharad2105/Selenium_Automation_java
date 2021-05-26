@@ -10,7 +10,7 @@ public class LinkedinLogin extends Base{
 
 
     @FindBy(id = "username")
-    WebElement mobile;
+    WebElement email;
 
     @FindBy(id = "password")
     WebElement pass;
@@ -21,10 +21,10 @@ public class LinkedinLogin extends Base{
         PageFactory.initElements(driver, this);
     }
     public void loggedInToApp() throws InterruptedException {
-        mobile.sendKeys("patilsharad2000@gmail.com");
+        email.sendKeys("patilsharad2000@gmail.com");
         pass.sendKeys("Sharad@1998");
         signInButton.click();
-        Thread.sleep(50000);
+        Thread.sleep(5000);
 
         return;
     }

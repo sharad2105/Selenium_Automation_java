@@ -1,10 +1,11 @@
 package com.bridgelabz.selenium.driver;
 
+import com.bridgelabz.selenium.utilities.Screenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class TestNGListeners implements ITestListener {
+public class TestNGListeners extends Screenshot implements ITestListener {
     @Override
     public void onTestStart(ITestResult result) {
         System.out.println("Test starts "+result.getName());
@@ -18,6 +19,7 @@ public class TestNGListeners implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         System.out.println("Name of the failed test case "+result.getName());
+        takescreenshot(result.getMethod().getMethodName());
     }
 
     @Override
