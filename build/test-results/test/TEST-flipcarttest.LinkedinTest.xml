@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="flipcarttest.LinkedinTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-26T03:19:28" hostname="DESKTOP-CUM2MCV" time="62.302">
+  <properties/>
+  <testcase name="linkedin_login" classname="flipcarttest.LinkedinTest" time="62.302"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
