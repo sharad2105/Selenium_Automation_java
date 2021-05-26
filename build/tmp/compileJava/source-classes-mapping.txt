@@ -2,3 +2,7 @@ com/bridgelabz/selenium/base/Base.java
  com.bridgelabz.selenium.base.Base
 com/bridgelabz/selenium/pages/LinkedinLogin.java
  com.bridgelabz.selenium.pages.LinkedinLogin
+com/bridgelabz/selenium/pages/Messaging.java
+ com.bridgelabz.selenium.pages.Messaging
+com/bridgelabz/selenium/driver/TestNGListeners.java
+ com.bridgelabz.selenium.driver.TestNGListeners
